@@ -12,6 +12,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages --depth=1 clone
 # Update packages
 rm -rf feeds/luci/applications/luci-app-passwall
 cp -rf clone/amlogic/luci-app-amlogic clone/passwall2/luci-app-passwall2 clone/passwall-packages/[a-z]* feeds/luci/applications/
+sed -i '/luci-app-attendedsysupgrade/d' feeds/luci/collections/luci/Makefile
 
 # Clean packages
 rm -rf clone
